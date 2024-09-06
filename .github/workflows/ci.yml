@@ -12,6 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Install docker
+      run: |
+        sudo apt install -y docker.io docker-compose
     - uses: actions/checkout@v3
     - name: Run docker-compose up
       run: docker-compose up
